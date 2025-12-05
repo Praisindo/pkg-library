@@ -3,10 +3,11 @@ package external
 import (
 	"context"
 	"encoding/json"
-	"github.com/RumbiaID/pkg-library/app/pkg/constants"
-	"github.com/RumbiaID/pkg-library/app/pkg/exception"
-	"github.com/google/uuid"
 	"time"
+
+	"github.com/Praisindo/pkg-library/app/pkg/constants"
+	"github.com/Praisindo/pkg-library/app/pkg/exception"
+	"github.com/google/uuid"
 )
 
 type AuditSvcExternal interface {

@@ -1,8 +1,6 @@
 package mail
 
 import (
-	"github.com/RumbiaID/pkg-library/app/pkg/filevalidation"
-	"github.com/wneessen/go-mail"
 	"io"
 	"log/slog"
 	"net/http"
@@ -10,6 +8,9 @@ import (
 	"os"
 	"strings"
 	"time"
+
+	"github.com/Praisindo/pkg-library/app/pkg/filevalidation"
+	"github.com/wneessen/go-mail"
 )
 
 type Config struct {

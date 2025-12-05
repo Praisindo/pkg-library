@@ -2,11 +2,12 @@ package repository
 
 import (
 	"context"
-	"github.com/RumbiaID/pkg-library/app/pkg/constants"
-	"github.com/RumbiaID/pkg-library/app/pkg/pending/domain"
-	"github.com/RumbiaID/pkg-library/app/pkg/structType"
-	"gorm.io/gorm"
 	"strings"
+
+	"github.com/Praisindo/pkg-library/app/pkg/constants"
+	"github.com/Praisindo/pkg-library/app/pkg/pending/domain"
+	"github.com/Praisindo/pkg-library/app/pkg/structType"
+	"gorm.io/gorm"
 )
 
 type PendingRepositoryImpl struct {

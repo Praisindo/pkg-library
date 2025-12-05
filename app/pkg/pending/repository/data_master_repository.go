@@ -2,7 +2,8 @@ package repository
 
 import (
 	"context"
-	"github.com/RumbiaID/pkg-library/app/pkg/pending/domain"
+
+	"github.com/Praisindo/pkg-library/app/pkg/pending/domain"
 	"gorm.io/gorm"
 )
 

@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	domain "github.com/RumbiaID/pkg-library/app/pkg/pending/domain"
+	domain "github.com/Praisindo/pkg-library/app/pkg/pending/domain"
 	gorm "gorm.io/gorm"
 
 	mock "github.com/stretchr/testify/mock"

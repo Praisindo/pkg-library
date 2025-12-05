@@ -2,10 +2,11 @@ package structType
 
 import (
 	"errors"
-	"github.com/RumbiaID/pkg-library/app/pkg/constants"
-	"github.com/RumbiaID/pkg-library/app/pkg/loggingdata"
 	"reflect"
 	"time"
+
+	"github.com/Praisindo/pkg-library/app/pkg/constants"
+	"github.com/Praisindo/pkg-library/app/pkg/loggingdata"
 )
 
 // RETURN 1 for json where, RETURN 2 for column

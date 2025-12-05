@@ -2,17 +2,17 @@ This library will be used as main library for helpers
 
 
 ````
-go get github.com/RumbiaID/pkg-library
+go get github.com/Praisindo/pkg-library
 ````
 
 to update:
 ````
-go get -u github.com/RumbiaID/pkg-library@v.x.x
+go get -u github.com/Praisindo/pkg-library@v.x.x
 ````
 
 How to Use CQRS
 
-1. In the main package you are using, make sure you import "github.com/RumbiaID/pkg-library/app/pkg/database".
+1. In the main package you are using, make sure you import "github.com/Praisindo/pkg-library/app/pkg/database".
 
 2. During the declaration of using the database, you would run a function from the database folder called NewDatabase(driver string, cfg *Config)
 
@@ -59,7 +59,7 @@ type Database struct {
 This project implements a Dual Approval system using GORM, designed to manage data entities with an approval workflow. The system supports multiple states for data entities (pending insert, pending update, pending delete, active, etc.) and integrates with an audit service for tracking changes.
 
 - **Pending Repository**: [Pending Repository](./app/pkg/pending)
-- **Audit Service**: [Audit Service Repository](https://github.com/RumbiaID/cpm-audit-service)
+- **Audit Service**: [Audit Service Repository](https://github.com/Praisindo/cpm-audit-service)
 
 ---
 
@@ -871,5 +871,5 @@ func (s *ExampleServiceImpl) ReturnExample(
 
 ## Conclusion
 
-This Dual Approval System is built to ensure data integrity through a pending approval mechanism for inserts, updates, and deletes. It integrates closely with an audit service to track every change and rollback where necessary. For more information on the system design, refer to the [System Design Documentation](https://praisindo.getoutline.com/s/1d3acb03-4e66-4e7f-a401-9e0444c32bb5) and the [Audit Service Repository](https://github.com/RumbiaID/cpm-audit-service).
+This Dual Approval System is built to ensure data integrity through a pending approval mechanism for inserts, updates, and deletes. It integrates closely with an audit service to track every change and rollback where necessary. For more information on the system design, refer to the [System Design Documentation](https://praisindo.getoutline.com/s/1d3acb03-4e66-4e7f-a401-9e0444c32bb5) and the [Audit Service Repository](https://github.com/Praisindo/cpm-audit-service).
 
