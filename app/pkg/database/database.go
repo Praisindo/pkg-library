@@ -2,12 +2,13 @@ package database
 
 import (
 	"fmt"
-	"github.com/sirupsen/logrus"
-	"gorm.io/gorm/schema"
-	"gorm.io/plugin/dbresolver"
 	"log/slog"
 	"os"
 	"time"
+
+	"github.com/sirupsen/logrus"
+	"gorm.io/gorm/schema"
+	"gorm.io/plugin/dbresolver"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
@@ -23,6 +24,7 @@ type Config struct {
 	DbName   string
 	DbPort   string
 	DbPrefix string
+	DSN      string
 }
 
 type Database struct {
@@ -41,7 +43,11 @@ func NewDatabase(driver string, cfg *Config) *Database {
 
 	switch driver {
 	case "postgres", "pgsql":
-		dialect = postgres.Open(fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Shanghai", cfg.DbHost, cfg.DbUser, cfg.DbPass, cfg.DbName, cfg.DbPort))
+		if cfg.DSN == "" {
+			dialect = postgres.Open(fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Kuala_Lumpur", cfg.DbHost, cfg.DbUser, cfg.DbPass, cfg.DbName, cfg.DbPort))
+		} else {
+			dialect = postgres.Open(cfg.DSN)
+		}
 	case "mysql":
 		dialect = mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local", cfg.DbUser, cfg.DbPass, cfg.DbHost, cfg.DbPort, cfg.DbName))
 	case "sqlserver":
